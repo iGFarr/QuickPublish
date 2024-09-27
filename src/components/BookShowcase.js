@@ -3,6 +3,7 @@ import React from "react";
 import ShatterVeilCover from "../images/coverImages/TheShatterVeilFrontCover.png";
 import AtTheEdgeCover from "../images/coverImages/AtTheEdge_FrontCover.png";
 import MetalAndDustCover from "../images/coverImages/MetalAndDustCover.png";
+import AwakeningProtCover from "../images/coverImages/AwakeningProtCover.png";
 
 const books = [
   {
@@ -19,6 +20,11 @@ const books = [
     title: "Metal & Dust",
     link: "https://a.co/d/9r89DHz",
     cover: MetalAndDustCover,
+  },
+  {
+    title: "Awakening Protocol",
+    link: "https://a.co/d/d1DK1bU",
+    cover: AwakeningProtCover,
   },
 ];
 
