@@ -190,10 +190,11 @@ body {
 /* Mobile Adjustments */
 @media (max-width: 768px) {
   .page-background {
-    background-attachment: fixed;
+    background-attachment: fixed; /* Fix the background on mobile */
     background-position: center;
     background-size: cover;
-    min-height: 100vh; /* Ensure the background always covers the entire screen */
+    min-height: 100vh;
+    height: auto;
   }
   /* Ensure the forms fit well on mobile devices */
   .jumbotron {
