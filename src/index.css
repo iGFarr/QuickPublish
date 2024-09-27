@@ -96,11 +96,11 @@ body {
 .story-forms {
   background: url("/src/images/HomeBg.png") no-repeat center center fixed;
   background-size: cover;
-  min-height: 100vh; /* Ensure it covers the full height */
-  width: 50%;
+  min-height: 100vh;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Align forms to the top */
+  justify-content: flex-start;
   padding: 2rem;
   color: white;
 }
@@ -387,8 +387,8 @@ h6 {
     color: white;
   }
 
-  .story-forms form {
-    width: 90vw; /* Adjust form width for mobile */
+  .story-forms form h3 {
+    width: 95vw; /* Adjust form width for mobile */
   }
 
   .book-showcase .book-item img {
@@ -409,5 +409,10 @@ h6 {
   .form-group {
     margin-bottom: 1.5rem;
     width: 90vw;
+  }
+
+  h3 {
+    max-width: 80%; /* Ensure the text stays centered within the viewport */
+    margin: 0 auto;
   }
 }
