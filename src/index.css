@@ -12,7 +12,13 @@ body {
 
 /* Apply text shadow for all elements to increase readability */
 * {
-  text-shadow: 1px 1px 2px black; /* Small black stroke around text */
+  text-shadow: 1px 1px 2px black;
+}
+
+/* Remove text-shadow for form inputs, error messages, and solid backgrounds */
+.form-control,
+.error-message {
+  text-shadow: none; /* No stroke for form fields and error messages */
 }
 
 /* Full-Screen Background */
@@ -157,6 +163,18 @@ body {
 
 .contact-form h2 {
   margin-bottom: 1.5rem;
+}
+
+/* Dark Card for Contact Form */
+.contact-card {
+  background-color: rgba(52, 58, 64, 0.9);
+  border-radius: 8px;
+  padding: 2rem;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 2rem auto;
 }
 
 .form-control {

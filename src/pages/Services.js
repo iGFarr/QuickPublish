@@ -134,7 +134,9 @@ const Services = () => {
             <h3>Fill in the details for your book:</h3>
 
             {errorMessage && (
-              <div className="alert alert-danger">{errorMessage}</div>
+              <div className="alert alert-danger error-message">
+                {errorMessage}
+              </div>
             )}
 
             <form onSubmit={handleSubmit}>
