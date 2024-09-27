@@ -1,7 +1,8 @@
 // BookShowcase.js
 import React from "react";
-import ShatterVeilCover from "../images/TheShatterVeilFrontCover.png";
-import AtTheEdgeCover from "../images/AtTheEdge_FrontCover.png";
+import ShatterVeilCover from "../images/coverImages/TheShatterVeilFrontCover.png";
+import AtTheEdgeCover from "../images/coverImages/AtTheEdge_FrontCover.png";
+import MetalAndDustCover from "../images/coverImages/MetalAndDustCover.png";
 
 const books = [
   {
@@ -14,7 +15,11 @@ const books = [
     link: "https://a.co/d/3RqTM3L",
     cover: AtTheEdgeCover,
   },
-  // Add more books here
+  {
+    title: "Metal & Dust",
+    link: "https://a.co/d/9r89DHz",
+    cover: MetalAndDustCover,
+  },
 ];
 
 const BookShowcase = () => {
