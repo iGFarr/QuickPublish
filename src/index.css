@@ -36,7 +36,7 @@ body {
 
 /* Override Bootstrap's navbar classes */
 .navbar {
-  position: relative !important; /* Make sure the navbar stays fixed */
+  position: fixed !important; /* Make sure the navbar stays fixed */
   top: 0;
   left: 0;
   right: 0;
