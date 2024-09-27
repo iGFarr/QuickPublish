@@ -189,17 +189,31 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+  /* Full-Screen Background */
   .page-background {
-    background-attachment: fixed; /* Fix the background on mobile */
-    background-position: center;
-    background-size: cover;
+    position: relative;
     min-height: 100vh;
-    height: auto;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
+
+  /* Fix the background for mobile using a pseudo-element */
+  .page-background::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: url("/src/images/HomeBg.png") no-repeat center center fixed;
+    background-size: cover;
+    z-index: -1; /* Ensure it stays in the background */
+  }
+
   /* Ensure the forms fit well on mobile devices */
   .jumbotron {
     margin-top: 24px;
