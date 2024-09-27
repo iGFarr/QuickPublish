@@ -404,4 +404,10 @@ h6 {
     padding: 15px;
     text-align: center;
   }
+
+  /* Form styling */
+  .form-group {
+    margin-bottom: 1.5rem;
+    width: 90vw;
+  }
 }
