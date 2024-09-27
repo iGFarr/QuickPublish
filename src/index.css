@@ -388,7 +388,7 @@ h6 {
   }
 
   .story-forms form {
-    width: 90%; /* Adjust form width for mobile */
+    width: 90vw; /* Adjust form width for mobile */
   }
 
   .book-showcase .book-item img {
