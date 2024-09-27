@@ -3,184 +3,108 @@ html,
 body {
   height: 100%;
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   overflow-x: hidden; /* Prevent horizontal scrolling */
-}
-
-body {
   font-family: "Arial", sans-serif;
   background-color: #f8f9fa;
-  margin: 0;
-  box-sizing: border-box;
 }
-/* Fixed navbar */
+
+/* Full-Screen Background */
+.page-background {
+  background: url("/src/images/HomeBg.png") no-repeat center center fixed;
+  background-size: cover; /* Ensure the image covers the entire viewport */
+  min-height: 100vh; /* Set the minimum height to the viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: auto; /* Enable content scrolling within the background */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+/* Navbar Styling */
 .navbar {
-  position: sticky; /* Fixed to the top of the screen */
-  top: 0; /* Stick to the top */
-  left: 0; /* Align to the left */
-  right: 0; /* Align to the right */
-  z-index: 1000; /* Ensure it stays on top of all other elements */
-  background-color: #343a40; /* Dark background for visibility */
-  padding: 1rem;
-  width: 100%; /* Make sure it stretches the full width */
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent background */
 }
 
-.navbar .navbar-brand {
-  color: #463d97;
-  font-weight: bold;
-  text-transform: uppercase;
+.navbar-toggler {
+  border: none;
 }
 
-.navbar-brand:hover {
-  color: #9d98c6;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255,0.5)' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
-.navbar .nav-link {
-  color: #9730c3;
-  margin-left: 1rem;
-  opacity: 0.8;
+/* Jumbotron / Header Section */
+.jumbotron {
+  background: inherit; /* Use the same background as the page */
+  width: 100%;
+  min-height: 100vh; /* Ensure it covers the full viewport height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  color: white;
+  text-align: center;
 }
 
-.navbar .nav-link:hover {
-  color: #00b4d8;
-  opacity: 1;
+/* Form Styling */
+.story-forms {
+  background: inherit; /* Continue the page background */
+  width: 90%;
+  max-width: 1200px; /* Limit form width on larger screens */
+  margin: 0 auto;
+  padding: 2rem;
 }
 
-/* Active Nav Link Color */
-.navbar .nav-link.active {
-  color: #00b4d8;
-  font-weight: bold;
-  opacity: 1;
+.form-group {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: #00b4d8;
+  border: none;
+  padding: 0.8rem 2rem;
+  font-size: 1.2rem;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+}
+
+.btn-primary:hover {
+  background-color: #0077b6;
 }
 
 /* Footer Styling */
 .footer {
-  background: none;
+  background-color: transparent;
+  color: white;
   text-align: center;
   padding: 1rem;
-  margin-top: 2rem;
+  padding-bottom: 4px;
   width: 100%;
-}
-
-/* Home Page (Jumbotron) */
-.jumbotron {
-  background: url("/src/images/HomeBg.png") no-repeat center center fixed;
-  background-size: cover;
-  color: white;
-  text-align: center;
-  width: 100vw; /* Full width of the viewport */
-  height: 100vh; /* Full height of the viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-}
-
-/* Home Page (Jumbotron) and other page backgrounds */
-.jumbotron,
-.page-background,
-.story-forms {
-  background: url("/src/images/HomeBg.png") no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh; /* Ensure it covers the full viewport */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
-  color: white;
-}
-
-/* Service Forms Background */
-.story-forms {
-  background: url("/src/images/HomeBg.png") no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  width: 80%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  padding: 2rem;
-  color: white;
-}
-
-.jumbotron::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  z-index: -1; /* Ensures the background image stays behind the content */
-}
-
-.jumbotron h1,
-.jumbotron p {
-  max-width: 80%; /* Ensure the text stays centered within the viewport */
-  margin: 0 auto;
-}
-
-.jumbotron h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-}
-
-.jumbotron p {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
-
-.jumbotron .btn-primary {
-  background-color: #00b4d8;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-/* Service Overview */
-.service-overview {
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.service-overview h2 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
-.service-overview p {
-  font-size: 1.1rem;
-  margin-bottom: 1.5rem;
-}
-
-.service-overview ul {
-  list-style-type: none;
-  padding: 0;
-}
-
-.service-overview ul li {
-  margin-bottom: 0.5rem;
-}
-
-.service-overview .btn-primary {
-  background-color: #00b4d8;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1rem;
-  cursor: pointer;
+  position: fixed;
+  bottom: 0;
 }
 
 /* Book Showcase */
 .book-showcase {
   padding: 3rem 0;
-}
-
-.book-showcase h2 {
-  text-align: center;
-  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .books-container {
@@ -215,166 +139,44 @@ body {
   text-decoration: underline;
 }
 
-/* Contact Page */
-.contact {
-  padding: 3rem 0;
-}
-
-.contact h2 {
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* General page background styling for all pages */
-.page-background {
-  background: url("/src/images/HomeBg.png") no-repeat center center fixed;
-  background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 3rem 0;
-  color: white;
-}
-
-/* Text styling */
-h2,
-h1 {
-  color: #ffffff;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-}
-
-p {
-  font-size: 1.2rem;
-  line-height: 1.6;
-  color: #f8f9fa;
-  text-align: center;
-  margin-bottom: 2rem;
-}
-
-/* Button styling */
-.btn-primary {
-  background-color: #00b4d8;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #0077b6;
-}
-
-ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 2rem;
-}
-
-ul li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
-}
-
-/* Contact Page */
+/* Contact Form */
 .contact-form {
-  width: 100%;
+  width: 90%;
   max-width: 600px;
-  margin: 0 auto;
-  background-color: rgba(0, 0, 0, 0.7);
+  margin: 2rem auto;
+  text-align: center;
   padding: 2rem;
-  border-radius: 10px;
 }
 
-.contact-form label {
-  color: white;
-}
-
-/* Button styling */
-.btn-primary {
-  background-color: #00b4d8;
-  border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1.2rem;
-  cursor: pointer;
-}
-
-.btn-primary:hover {
-  background-color: #0077b6;
-}
-
-/* Form styling */
-.form-group {
-  margin-bottom: 1.5rem;
-  width: 60vw;
-}
-
-/* Form styling */
-.contact-form-group {
+.contact-form h2 {
   margin-bottom: 1.5rem;
 }
 
 .form-control {
   width: 100%;
-  padding: 0.8rem;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
   font-size: 1rem;
 }
 
-/* General text shadow for better readability */
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7); /* Creates a small dark border stroke */
-  color: #ffffff; /* Set color to white or adjust as needed */
-}
-
-/* Custom Navbar Styling */
-.custom-navbar {
-  background-color: rgb(149, 120, 186); /* Dark background color */
-  color: white; /* Set text color to white */
-  padding: 1rem;
-}
-
-/* Navbar link styles */
-.custom-navbar .nav-link {
-  color: white; /* Set default link color */
-  opacity: 0.8; /* Slight transparency */
-}
-
-.custom-navbar .nav-link:hover {
-  color: #00b4d8; /* Color when hovered */
-  opacity: 1; /* Full opacity on hover */
-}
-
-/* Active link styling */
-.custom-navbar .nav-link.active {
-  color: #225c68; /* Color for active link */
-  font-weight: bold;
-}
-
-/* Ensure the navbar and content are responsive */
-.navbar {
-  background-color: #343a40; /* Ensure navbar background */
-}
-
-.navbar-toggler {
-  border: none;
-}
-
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' linecap='round' linejoin='round' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-}
-
-/* Adjustments for mobile devices */
+/* Mobile Adjustments */
 @media (max-width: 768px) {
+  /* Ensure the forms fit well on mobile devices */
+  .story-forms,
+  .contact-form,
+  .form-group {
+    width: 90vw; /* Ensure no content overflows on mobile */
+  }
+
+  .jumbotron {
+    margin-top: 24px;
+  }
+
   .navbar-nav {
     text-align: center;
-    background-color: #343a40;
+    background-color: rgba(52, 58, 64, 0.9);
   }
 
   .navbar-nav .nav-link {
@@ -384,15 +186,6 @@ h6 {
 
   .navbar-nav .nav-link:hover {
     background-color: #00b4d8;
-    color: white;
-  }
-
-  .story-forms form h3 {
-    width: 95vw; /* Adjust form width for mobile */
-  }
-
-  .book-showcase .book-item img {
-    width: 100%;
   }
 
   .jumbotron {
@@ -402,17 +195,5 @@ h6 {
 
   .contact-form {
     padding: 15px;
-    text-align: center;
-  }
-
-  /* Form styling */
-  .form-group {
-    margin-bottom: 1.5rem;
-    width: 90vw;
-  }
-
-  h3 {
-    max-width: 80%; /* Ensure the text stays centered within the viewport */
-    margin: 0 auto;
   }
 }
