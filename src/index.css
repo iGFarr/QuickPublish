@@ -36,7 +36,7 @@ body {
 
 /* Override Bootstrap's navbar classes */
 .navbar {
-  position: fixed !important; /* Make sure the navbar stays fixed */
+  position: relative !important; /* Make sure the navbar stays fixed */
   top: 0;
   left: 0;
   right: 0;
@@ -224,8 +224,18 @@ body {
     background-color: #00b4d8;
   }
 
-  .jumbotron {
-    padding: 20px;
+  .story-forms,
+  .error-message,
+  .jumbotron h2 {
+    width: 90%;
+  }
+
+  .form-group {
+    width: 90%; /* Ensure forms take up 90% width on mobile */
+  }
+
+  .jumbotron h2 {
+    width: 90%;
     text-align: center;
   }
 
