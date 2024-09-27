@@ -224,21 +224,6 @@ body {
     background-color: #00b4d8;
   }
 
-  .story-forms,
-  .error-message,
-  .jumbotron h2 {
-    width: 90%;
-  }
-
-  .form-group {
-    width: 90%; /* Ensure forms take up 90% width on mobile */
-  }
-
-  .jumbotron h2 {
-    width: 90%;
-    text-align: center;
-  }
-
   .contact-form {
     padding: 15px;
   }
