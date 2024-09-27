@@ -11,12 +11,16 @@ function App() {
   return (
     <Router>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/showcase" element={<Showcase />} />
-        <Route path="/contact" element={<Contact />} />
-      </Routes>
+      <div style={{ marginTop: "70px" }}>
+        {" "}
+        {/* Ensure there’s enough space for the navbar */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/showcase" element={<Showcase />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
     </Router>
   );
 }
