@@ -10,6 +10,11 @@ body {
   background-color: #f8f9fa;
 }
 
+/* Apply text shadow for all elements to increase readability */
+* {
+  text-shadow: 1px 1px 2px black; /* Small black stroke around text */
+}
+
 /* Full-Screen Background */
 .page-background {
   background: url("/src/images/HomeBg.png") no-repeat center center fixed;
@@ -34,6 +39,8 @@ body {
 
 .navbar-toggler {
   border: none;
+  margin: 4px;
+  margin-bottom: 8px;
 }
 
 .navbar-toggler-icon {
@@ -156,7 +163,7 @@ body {
   width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
-  border: 1px solid #ced4da;
+  border: 1px solid #1076dc;
   border-radius: 5px;
   font-size: 1rem;
 }
@@ -174,7 +181,7 @@ body {
   }
 
   .navbar-nav .nav-link {
-    padding: 15px;
+    padding: 5px;
     color: white;
   }
 
