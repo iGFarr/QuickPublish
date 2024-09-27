@@ -163,8 +163,28 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
+  /* Ensure the forms fit well on mobile devices */
   .jumbotron {
     margin-top: 24px;
+  }
+
+  .navbar-nav {
+    text-align: center;
+    background-color: rgba(52, 58, 64, 0.9);
+  }
+
+  .navbar-nav .nav-link {
+    padding: 15px;
+    color: white;
+  }
+
+  .navbar-nav .nav-link:hover {
+    background-color: #00b4d8;
+  }
+
+  .jumbotron {
+    padding: 20px;
+    text-align: center;
   }
 
   .contact-form {
