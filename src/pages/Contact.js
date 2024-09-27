@@ -15,28 +15,29 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // EmailJS send email function
-    emailjs
-      .send(
-        "service_socvfxk", // Replace with your EmailJS service ID
-        "template_xilzgq5", // Replace with your EmailJS template ID
-        {
-          from_name: form.name + "  @  " + form.email,
-          message: form.message,
-        },
-        "cRaDZUzOm4I_1_AkQ" // Replace with your EmailJS user ID
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          alert("Email sent successfully!");
-        },
-        (err) => {
-          console.error("FAILED...", err);
-          alert("Failed to send email.");
-        }
-      );
-
+    if (form.message.length > 5) {
+      // EmailJS send email function
+      emailjs
+        .send(
+          "service_socvfxk", // Replace with your EmailJS service ID
+          "template_xilzgq5", // Replace with your EmailJS template ID
+          {
+            from_name: form.name + "  @  " + form.email,
+            message: form.message,
+          },
+          "cRaDZUzOm4I_1_AkQ" // Replace with your EmailJS user ID
+        )
+        .then(
+          (response) => {
+            console.log("SUCCESS!", response.status, response.text);
+            alert("Email sent successfully!");
+          },
+          (err) => {
+            console.error("FAILED...", err);
+            alert("Failed to send email.");
+          }
+        );
+    }
     // Clear the form after submission
     setForm({
       name: "",
