@@ -34,13 +34,16 @@ body {
   align-items: center;
 }
 
-/* Navbar Styling */
+/* Override Bootstrap's navbar classes */
 .navbar {
-  position: sticky;
+  position: fixed !important; /* Make sure the navbar stays fixed */
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 1000;
-  width: 100%;
+  width: 100%; /* Ensure full width */
   background-color: rgba(52, 58, 64, 0.9); /* Semi-transparent background */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for visibility */
 }
 
 .navbar-toggler {
