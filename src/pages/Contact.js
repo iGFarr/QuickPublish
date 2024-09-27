@@ -31,6 +31,12 @@ const Contact = () => {
           (response) => {
             console.log("SUCCESS!", response.status, response.text);
             alert("Email sent successfully!");
+            // Clear the form after submission
+            setForm({
+              name: "",
+              email: "",
+              message: "",
+            });
           },
           (err) => {
             console.error("FAILED...", err);
@@ -38,12 +44,6 @@ const Contact = () => {
           }
         );
     }
-    // Clear the form after submission
-    setForm({
-      name: "",
-      email: "",
-      message: "",
-    });
   };
 
   return (
