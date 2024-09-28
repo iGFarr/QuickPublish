@@ -192,22 +192,22 @@ body {
 
 /* Mobile Adjustments */
 @media (max-width: 768px) {
-  /* Fix the background for mobile using a pseudo-element */
-  .page-background::before {
-    content: "";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+  .page-background {
     background: url("/src/images/HomeBg.png") no-repeat center center fixed;
-    background-size: cover;
-    z-index: -1; /* Ensure it stays in the background */
+    background-size: cover; /* Ensure the image covers the entire viewport */
+    min-height: 100vh; /* Set the minimum height to the viewport height */
+    width: 100vw; /* Full viewport width */
+    overflow: auto; /* Enable content scrolling within the background */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
   }
 
   /* Ensure the forms fit well on mobile devices */
   .jumbotron {
     margin-top: 24px;
+    padding: 8px;
   }
 
   .navbar-nav {
@@ -226,5 +226,23 @@ body {
 
   .contact-form {
     padding: 15px;
+  }
+
+  .story-forms {
+    background: inherit; /* Continue the page background */
+    width: 100%;
+    margin: 0;
+    padding: 8px;
+  }
+
+  .form-group {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    font-size: 1rem;
   }
 }

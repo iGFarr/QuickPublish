@@ -214,7 +214,11 @@ const Services = () => {
                 ></textarea>
               </div>
 
-              <button type="submit" className="btn btn-primary">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ marginBottom: "48px" }}
+              >
                 Submit Your Story & Go to Payment
               </button>
             </form>
