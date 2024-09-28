@@ -204,6 +204,26 @@ body {
     align-items: center;
   }
 
+  /* Fix background scrolling on iOS/Android */
+  @supports (-webkit-touch-callout: none) {
+    .page-background {
+      background-attachment: scroll;
+    }
+
+    body::before {
+      content: "";
+      background: url("/src/images/HomeBg.png") no-repeat center center;
+      background-size: cover;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: -1;
+      display: block;
+    }
+  }
+
   /* Ensure the forms fit well on mobile devices */
   .jumbotron {
     margin-top: 24px;
