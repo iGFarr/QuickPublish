@@ -9,7 +9,9 @@ const Home = () => {
         <h1>Welcome to QuickPublish!</h1>
         <p>
           QuickPublish is the only site that utilizes LLM's to turn your idea
-          into a finished and published book in a matter of hours or days.
+          into a finished and published book in a matter of hours or days. Other
+          sites use humans to ghostwrite your book, costing thousands of dollars
+          and taking weeks or months to deliver.
         </p>
         <ServiceOverview />
         <a href="/services" className="btn btn-primary">
