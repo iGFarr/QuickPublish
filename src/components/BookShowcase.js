@@ -4,12 +4,18 @@ import ShatterVeilCover from "../images/coverImages/TheShatterVeilFrontCover.png
 import AtTheEdgeCover from "../images/coverImages/AtTheEdge_FrontCover.png";
 import MetalAndDustCover from "../images/coverImages/MetalAndDustCover.png";
 import AwakeningProtCover from "../images/coverImages/AwakeningProtCover.png";
+import SaintsSecretCover from "../images/coverImages/ASaintsSecretFrontCover.png";
 
 const books = [
   {
     title: "The Shattered Veil",
     link: "https://a.co/d/7CxtVgA",
     cover: ShatterVeilCover,
+  },
+  {
+    title: "A Saint's Secret",
+    link: "https://a.co/d/e3Kgksa",
+    cover: SaintsSecretCover,
   },
   {
     title: "A World At The Edge of Time",
