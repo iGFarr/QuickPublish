@@ -68,7 +68,17 @@ const Services = () => {
             console.log("Failed to send email", err);
           }
         );
-
+      // Fire the Facebook Pixel InitiateCheckout event
+      fbq("track", "InitiateCheckout", {
+        value: 99.0,
+        currency: "USD",
+        content_name: form.bookTitle || "Book Writing Service",
+        content_category: "Book Services",
+        custom_data: {
+          customer_name: form.customerName,
+          email: form.customerEmail,
+        },
+      });
       // Redirect to PayPal with the form data
       const bookDetails = `Title: ${form.bookTitle || "N/A"}, Protagonist: ${
         form.protagonistName || "N/A"
@@ -222,10 +232,6 @@ const Services = () => {
               >
                 Submit Your Story & Go to Payment
               </button>
-              <script type="text/javascript">
-                document.getElementById('checkOutButton').addEventListener('click',
-                function() {}, false); fbq('track', 'InitiateCheckout');
-              </script>
             </form>
           </div>
         )}
