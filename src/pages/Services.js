@@ -1,3 +1,4 @@
+/* global fbq */
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import Footer from "../components/Footer";
