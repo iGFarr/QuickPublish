@@ -224,7 +224,7 @@ const Services = () => {
               </button>
               <script type="text/javascript">
                 document.getElementById('checkOutButton').addEventListener('click',
-                function() {}, false);
+                function() {}, false); fbq('track', 'InitiateCheckout');
               </script>
             </form>
           </div>
