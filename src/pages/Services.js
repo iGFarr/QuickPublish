@@ -217,10 +217,15 @@ const Services = () => {
               <button
                 type="submit"
                 className="btn btn-primary"
+                id="checkOutButton"
                 style={{ marginBottom: "48px" }}
               >
                 Submit Your Story & Go to Payment
               </button>
+              <script type="text/javascript">
+                document.getElementById('checkOutButton').addEventListener('click',
+                function() {}, false);
+              </script>
             </form>
           </div>
         )}
