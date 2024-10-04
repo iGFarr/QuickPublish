@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="page-background">
       <header className="jumbotron">
-        <h1>Welcome to QuickSaavik!</h1>
+        <h1>Welcome to QuickPublish!</h1>
         <p>
           QuickPublish is the only site that utilizes LLM's to turn your idea
           into a finished and published book in a matter of hours or days. Other
