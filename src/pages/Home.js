@@ -14,10 +14,7 @@ const Home = () => {
           and taking weeks or months to deliver.
         </p>
         <ServiceOverview />
-        <a
-          href="https://happybastardsstudios.setmore.com/isaac"
-          className="btn btn-primary"
-        >
+        <a href="/services" className="btn btn-primary">
           Learn More
         </a>
         <Footer />
